@@ -40,5 +40,14 @@ public class Words {
         }
         return wordMap;
     }
+
+    public static void main(String[] args) {
+        System.out.println("main()");
+
+        String input = "The black cat jumped over the other black cat.";
+        Map<String,Integer> output = new Words().wordFreq(input);
+
+        System.out.println(output.toString());
+    }
 }
 // END java_word_freq
