@@ -1,12 +1,12 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Words" type="Application" factoryName="Application" nameIsGenerated="true">
+  <configuration default="false" name="Runner" type="Application" factoryName="Application" nameIsGenerated="true">
     <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
       <pattern>
-        <option name="PATTERN" value="com.nealford.functionalthinking.wordfreq.*" />
+        <option name="PATTERN" value="wordfreq.*" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>
-    <option name="MAIN_CLASS_NAME" value="com.nealford.functionalthinking.wordfreq.Words" />
+    <option name="MAIN_CLASS_NAME" value="wordfreq.Runner" />
     <option name="VM_PARAMETERS" value="" />
     <option name="PROGRAM_PARAMETERS" value="" />
     <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />

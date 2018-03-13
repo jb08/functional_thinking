@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
 
-public class Words {
+public class Words8 {
     private Set<String> NON_WORDS = new HashSet<String>() {{
         add("the");
         add("and");
