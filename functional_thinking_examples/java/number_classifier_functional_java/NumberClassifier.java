@@ -1,6 +1,7 @@
 package com.nealford.functionalthinking.numberclassifier;
 
 // BEGIN number_classifier_functional_java
+
 import fj.F;
 import fj.data.List;
 import static fj.data.List.range;

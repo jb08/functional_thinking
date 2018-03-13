@@ -10,5 +10,5 @@ public class RoundHole {
     public boolean pegFits(Circularity peg) {
         return peg.getRadius() <= radius;
     }
-    
+
 }

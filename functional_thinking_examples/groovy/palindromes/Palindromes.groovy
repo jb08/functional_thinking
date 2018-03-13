@@ -1,10 +1,10 @@
 def isPalindrome(s) {
-  def sl = s.toLowerCase()
-  sl == sl.reverse()
+    def sl = s.toLowerCase()
+    sl == sl.reverse()
 }
 
 def findFirstPalindrome(s) {
-  s.tokenize(' ').find {isPalindrome(it)}
+    s.tokenize(' ').find { isPalindrome(it) }
 }
 
 s1 = "The quick brown fox jumped over anna the dog";

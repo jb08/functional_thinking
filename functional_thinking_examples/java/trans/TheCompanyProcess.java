@@ -5,7 +5,7 @@ import java.util.List;
 public class TheCompanyProcess {
     public String cleanNames(List<String> listOfNames) {
         StringBuilder result = new StringBuilder();
-        for(int i = 0; i < listOfNames.size(); i++) {
+        for (int i = 0; i < listOfNames.size(); i++) {
             if (listOfNames.get(i).length() > 1) {
                 result.append(capitalizeString(listOfNames.get(i))).append(",");
             }

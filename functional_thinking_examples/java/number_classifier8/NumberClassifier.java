@@ -1,6 +1,7 @@
 package com.nealford.ft.nc8;
 
 // BEGIN number_classifier_java8
+
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -28,7 +29,7 @@ public class NumberClassifier {
     }
 
     public static boolean isAbundant(int number) {
-        return aliquotSum(number)> number;
+        return aliquotSum(number) > number;
     }
 
     public static boolean isDeficient(int number) {
@@ -38,19 +39,19 @@ public class NumberClassifier {
 }
 // END number_classifier_java8
 
-    // BEGIN java8_filter_fast
-    //    public static List fastFactorsOf(int number) {
-    //        List<Integer> factors = range(1, (int) (sqrt(number) + 1))
-    //                .filter(potential -> number % potential == 0)
-    //                .boxed()
-    //                .collect(toList());
-    //        List factorsAboveSqrt = factors
-    //                .stream()
-    //                .map(e -> number / e).collect(toList());
-    //        factors.addAll(factorsAboveSqrt);
-    //        return factors.stream().distinct().collect(toList());
-    //    }
-    // END java8_filter_fast
+// BEGIN java8_filter_fast
+//    public static List fastFactorsOf(int number) {
+//        List<Integer> factors = range(1, (int) (sqrt(number) + 1))
+//                .filter(potential -> number % potential == 0)
+//                .boxed()
+//                .collect(toList());
+//        List factorsAboveSqrt = factors
+//                .stream()
+//                .map(e -> number / e).collect(toList());
+//        factors.addAll(factorsAboveSqrt);
+//        return factors.stream().distinct().collect(toList());
+//    }
+// END java8_filter_fast
 
 
 

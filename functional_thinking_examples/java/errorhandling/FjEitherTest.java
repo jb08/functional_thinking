@@ -51,56 +51,56 @@ public class FjEitherTest {
         assertEquals((long) 1000, (long) result.right().value());
     }
 
-// BEGIN java_fj_divide_exception_test
-@Test
-public void catching_other_people_exceptions() {
-    Either<Exception, Integer> result = FjRomanNumeralParser.divide(4, 2);
-    assertEquals((long) 2, (long) result.right().value());
-    Either<Exception, Integer> failure = FjRomanNumeralParser.divide(4, 0);
-    assertEquals("/ by zero", failure.left().value().getMessage());
-}
+    // BEGIN java_fj_divide_exception_test
+    @Test
+    public void catching_other_people_exceptions() {
+        Either<Exception, Integer> result = FjRomanNumeralParser.divide(4, 2);
+        assertEquals((long) 2, (long) result.right().value());
+        Either<Exception, Integer> failure = FjRomanNumeralParser.divide(4, 0);
+        assertEquals("/ by zero", failure.left().value().getMessage());
+    }
 // END java_fj_divide_exception_test
 
-// BEGIN java_fj_divide_lazy_exception_test
-@Test
-public void lazily_catching_other_peoples_exceptions() {
-    P1<Either<Exception, Integer>> result = FjRomanNumeralParser.divideLazily(4, 2);
-    assertEquals((long) 2, (long) result._1().right().value());
-    P1<Either<Exception, Integer>> failure = FjRomanNumeralParser.divideLazily(4, 0);
-    assertEquals("/ by zero", failure._1().left().value().getMessage());
-}
+    // BEGIN java_fj_divide_lazy_exception_test
+    @Test
+    public void lazily_catching_other_peoples_exceptions() {
+        P1<Either<Exception, Integer>> result = FjRomanNumeralParser.divideLazily(4, 2);
+        assertEquals((long) 2, (long) result._1().right().value());
+        P1<Either<Exception, Integer>> failure = FjRomanNumeralParser.divideLazily(4, 0);
+        assertEquals("/ by zero", failure._1().left().value().getMessage());
+    }
 // END java_fj_divide_lazy_exception_test
 
-// BEGIN java_fj_nested_exception_test
-private P1<Either<Exception, Double>> divide(final double x, final double y) {
-    return new P1<Either<Exception, Double>>() {
-        public Either<Exception, Double> _1() {
-            try {
-                return Either.right(x / y);
-            } catch (Exception e) {
-                return Either.left(e);
+    // BEGIN java_fj_nested_exception_test
+    private P1<Either<Exception, Double>> divide(final double x, final double y) {
+        return new P1<Either<Exception, Double>>() {
+            public Either<Exception, Double> _1() {
+                try {
+                    return Either.right(x / y);
+                } catch (Exception e) {
+                    return Either.left(e);
+                }
             }
-        }
-    };
-}
+        };
+    }
 
-@Test
-public void test_divide_romans_success() {
-    fj.data.Either<NumberFormatException, Either<ArithmeticException, Double>> result = FjRomanNumeralParser.divideRoman("IV", "II");
-    assertEquals(2.0,result.right().value().right().value().doubleValue(), 0.1);
-}
+    @Test
+    public void test_divide_romans_success() {
+        fj.data.Either<NumberFormatException, Either<ArithmeticException, Double>> result = FjRomanNumeralParser.divideRoman("IV", "II");
+        assertEquals(2.0, result.right().value().right().value().doubleValue(), 0.1);
+    }
 
-@Test
-public void test_divide_romans_number_format_error() {
-    Either<NumberFormatException, Either<ArithmeticException, Double>> result = FjRomanNumeralParser.divideRoman("IVooo", "II");
-    assertEquals("invalid parameter", result.left().value().getMessage());
-}
+    @Test
+    public void test_divide_romans_number_format_error() {
+        Either<NumberFormatException, Either<ArithmeticException, Double>> result = FjRomanNumeralParser.divideRoman("IVooo", "II");
+        assertEquals("invalid parameter", result.left().value().getMessage());
+    }
 
-@Test
-public void test_divide_romans_arthmetic_exception() {
-    Either<NumberFormatException, Either<ArithmeticException, Double>> result = FjRomanNumeralParser.divideRoman("IV", "I");
-    assertEquals("div by 1", result.right().value().left().value().getMessage());
-}
+    @Test
+    public void test_divide_romans_arthmetic_exception() {
+        Either<NumberFormatException, Either<ArithmeticException, Double>> result = FjRomanNumeralParser.divideRoman("IV", "I");
+        assertEquals("div by 1", result.right().value().left().value().getMessage());
+    }
 // END java_fj_nested_exception_test
 //
 //    @Ignore("can't get final assertion to work because of type system wonkery")
@@ -115,18 +115,18 @@ public void test_divide_romans_arthmetic_exception() {
 //    }
 
 
-// BEGIN java_fj_option_test
-@Test
-public void option_test_success() {
-    Option result = FjRomanNumeralParser.divide(4.0, 2);
-    assertEquals(2.0, (Double) result.some(), 0.1);
-}
+    // BEGIN java_fj_option_test
+    @Test
+    public void option_test_success() {
+        Option result = FjRomanNumeralParser.divide(4.0, 2);
+        assertEquals(2.0, (Double) result.some(), 0.1);
+    }
 
-@Test
-public void option_test_failure() {
-    Option result = FjRomanNumeralParser.divide(4.0, 0);
-    assertEquals(Option.none(), result);
-}
+    @Test
+    public void option_test_failure() {
+        Option result = FjRomanNumeralParser.divide(4.0, 0);
+        assertEquals(Option.none(), result);
+    }
 // END java_fj_option_test
 
 

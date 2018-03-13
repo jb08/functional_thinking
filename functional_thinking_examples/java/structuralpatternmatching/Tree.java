@@ -5,7 +5,8 @@ import static fj.data.Either.left;
 import static fj.data.Either.right;
 
 public abstract class Tree {
-    private Tree() {}
+    private Tree() {
+    }
 
     public abstract Either<Empty, Either<Leaf, Node>> toEither();
 
@@ -14,7 +15,8 @@ public abstract class Tree {
             return left(this);
         }
 
-        public Empty() {}
+        public Empty() {
+        }
     }
 
     public static final class Leaf extends Tree {
@@ -25,7 +27,9 @@ public abstract class Tree {
             return right(Either.<Leaf, Node>left(this));
         }
 
-        public Leaf(int n) { this.n = n; }
+        public Leaf(int n) {
+            this.n = n;
+        }
     }
 
     public static final class Node extends Tree {

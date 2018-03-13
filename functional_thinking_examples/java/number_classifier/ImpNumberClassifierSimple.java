@@ -1,6 +1,7 @@
 package nealford.ft.numberclassification;
 
 // BEGIN imp_classifier
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -11,12 +12,12 @@ public class ImpNumberClassifierSimple {
     private Map<Integer, Integer> _cache;         //<2>
 
     public ImpNumberClassifierSimple(int targetNumber) {
-      _number = targetNumber;
-      _cache = new HashMap<>();
+        _number = targetNumber;
+        _cache = new HashMap<>();
     }
 
     public boolean isFactor(int potential) {
-      return _number % potential == 0;
+        return _number % potential == 0;
     }
 
     public Set<Integer> getFactors() {

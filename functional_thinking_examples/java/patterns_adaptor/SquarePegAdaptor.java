@@ -8,7 +8,7 @@ public class SquarePegAdaptor implements Circularity {
     }
 
     public double getRadius() {
-        return Math.sqrt(Math.pow((peg.getWidth()/2), 2) * 2);
+        return Math.sqrt(Math.pow((peg.getWidth() / 2), 2) * 2);
     }
 
 }

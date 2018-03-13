@@ -1,6 +1,7 @@
 package com.nealford.functionalthinking.numberclassifier;
 
 // BEGIN number_classifier_functional_java_optimized
+
 import static fj.function.Integers.add;
 import static java.lang.Math.round;
 import static java.lang.Math.sqrt;

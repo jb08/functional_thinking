@@ -17,7 +17,9 @@ public class PrimeAlpha {
 
     public boolean isPrime() {
         Set<Integer> primeSet = new HashSet<Integer>() {{
-            add(1); add(number);}};
+            add(1);
+            add(number);
+        }};
         return number > 1 &&
                 factors().equals(primeSet);
     }

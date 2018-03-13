@@ -6,7 +6,7 @@ def it(spec, closure) {
             beforeIt()
         }
         listener.gotResult(new Result(Result.SUCCEEDED))
-    use(BehaviorCategory) {
+        use(BehaviorCategory) {
             closure()
         }
         if (afterIt != null) {

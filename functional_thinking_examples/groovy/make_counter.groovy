@@ -1,6 +1,6 @@
 def Closure makeCounter() {
-  def local_variable = 0
-  return { return local_variable += 1 }  // <1>
+    def local_variable = 0
+    return { return local_variable += 1 }  // <1>
 }
 
 c1 = makeCounter()    // <2>

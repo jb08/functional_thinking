@@ -1,8 +1,8 @@
 import scala.compat.Platform;
 
 // BEGIN scala_process
-val employees = List("neal", "s", "stu", "j", "rich", "bob", "aiden", "j", "ethan", 
-         "liam", "mason", "noah", "lucas", "jacob", "jayden", "jack")
+val employees = List("neal", "s", "stu", "j", "rich", "bob", "aiden", "j", "ethan",
+  "liam", "mason", "noah", "lucas", "jacob", "jayden", "jack")
 
 val result = employees
   .filter(_.length() > 1)
@@ -22,8 +22,8 @@ println("Parallel:" + parallelResult)
 
 println("\nBoundary:\n================")
 val bresult = List("")
-   .filter(_.length() > 1)
-   .map(_.capitalize)
+  .filter(_.length() > 1)
+  .map(_.capitalize)
 
 println("Boundary:" + bresult)
 

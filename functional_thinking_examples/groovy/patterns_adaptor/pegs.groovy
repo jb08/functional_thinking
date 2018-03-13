@@ -23,19 +23,22 @@ class SquarePegAdapter {
     def peg
 
     def getRadius() {
-        Math.sqrt(((peg.width/2) ** 2)*2)
+        Math.sqrt(((peg.width / 2)**2) * 2)
     }
 
     String toString() {
-        "SquarePegAdapter with peg width $peg.width "+ 
-        "(and notional radius $radius)"
+        "SquarePegAdapter with peg width $peg.width " +
+                "(and notional radius $radius)"
     }
 }
 // END groovy_pegs
 
 def roundPegOf(squarePeg) {
-    { p -> [getRadius:{Math.sqrt(
-                ((p.width/2) ** 2)*2)}] as RoundThing
+    { p ->
+        [getRadius: {
+            Math.sqrt(
+                    ((p.width / 2)**2) * 2)
+        }] as RoundThing
     }
 }
 

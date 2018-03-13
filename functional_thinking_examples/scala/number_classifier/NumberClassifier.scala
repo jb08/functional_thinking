@@ -8,7 +8,7 @@ object NumberClassifier {
   def factors(number: Int) =
     (1 to number) filter (isFactor(_, number))
 
-  def sum(factors : Seq[Int]) =
+  def sum(factors: Seq[Int]) =
     factors.foldLeft(0)(_ + _)
 
   def isPerfect(number: Int) =
@@ -20,4 +20,5 @@ object NumberClassifier {
   def isDeficient(number: Int) =
     sum(factors(number)) - number < number
 }
+
 // END Number_Classifier_Scala

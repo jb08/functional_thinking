@@ -7,16 +7,17 @@ import static groovy.util.GroovyTestCase.assertEquals
 
 class CamelizeTest {
 
-  // BEGIN groovy_camelize_test
-  @Test void can_camelize() {
-    def expected = [event_map: "eventMap",
-        name: "name", test_date: "testDate",
-        test_string_with_breaks: "testStringWithBreaks"]
-    use(Camelize) {
-      expected.each { key, value ->
-        assertEquals value, key.camelize
-      }
+    // BEGIN groovy_camelize_test
+    @Test
+    void can_camelize() {
+        def expected = [event_map              : "eventMap",
+                        name                   : "name", test_date: "testDate",
+                        test_string_with_breaks: "testStringWithBreaks"]
+        use(Camelize) {
+            expected.each { key, value ->
+                assertEquals value, key.camelize
+            }
+        }
     }
-  }
-  // END groovy_camelize_test
+    // END groovy_camelize_test
 }

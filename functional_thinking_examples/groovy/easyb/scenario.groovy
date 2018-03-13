@@ -20,10 +20,10 @@ it "should throw an exception when null is enqueued", {
 }
 
 it "should dequeue items in same order enqueued", {
-    [1..5].each {val ->
+    [1..5].each { val ->
         queue.enqueue(val)
     }
-    [1..5].each {val ->
+    [1..5].each { val ->
         queue.dequeue().shouldBe(val)
     }
 }

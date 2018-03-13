@@ -38,6 +38,7 @@ class AnonCounter {
 
 interface ListerFunc {
     public int call(int arg);
+
     public int getSum();
 }
 

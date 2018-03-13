@@ -11,6 +11,6 @@ public class NumberStuff {
                 return (!(i2 % 2 == 0)) ? i1 + i2 : i1;
             }
         }, 0);
-    // END java_foldleft_criteria
+        // END java_foldleft_criteria
     }
 }
